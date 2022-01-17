@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Android Studio/Maps 15 Januari/app/src/main/res/drawable/ic_menu_gallery.xml" value="0.22552083333333334" />
+        <entry key="..\:/Android Studio/Maps 15 Januari/app/src/main/res/layout/activity_main.xml" value="0.12771739130434784" />
+        <entry key="..\:/Android Studio/Maps 15 Januari/app/src/main/res/layout/activity_menu.xml" value="0.19157608695652173" />
+        <entry key="..\:/Android Studio/Maps 15 Januari/app/src/main/res/layout/activity_splass_screen.xml" value="0.1" />
+        <entry key="..\:/Android Studio/Maps 15 Januari/app/src/main/res/layout/app_bar_menu.xml" value="0.19157608695652173" />
+        <entry key="..\:/Android Studio/Maps 15 Januari/app/src/main/res/layout/content_menu.xml" value="0.1" />
+        <entry key="..\:/Android Studio/Maps 15 Januari/app/src/main/res/layout/fragment_gallery.xml" value="0.19157608695652173" />
+        <entry key="..\:/Android Studio/Maps 15 Januari/app/src/main/res/layout/fragment_home.xml" value="0.1875" />
+        <entry key="..\:/Android Studio/Maps 15 Januari/app/src/main/res/layout/fragment_maps.xml" value="0.15" />
+        <entry key="..\:/Android Studio/Maps 15 Januari/app/src/main/res/layout/fragment_maps2.xml" value="0.1" />
+        <entry key="..\:/Android Studio/Maps 15 Januari/app/src/main/res/layout/fragment_slideshow.xml" value="0.13179347826086957" />
+        <entry key="..\:/Android Studio/Maps 15 Januari/app/src/main/res/layout/item_home_wisata.xml" value="0.1875" />
+        <entry key="..\:/Android Studio/Maps 15 Januari/app/src/main/res/layout/item_navigation_wisata.xml" value="0.209375" />
+        <entry key="..\:/Android Studio/Maps 15 Januari/app/src/main/res/layout/item_nigation_wisata.xml" value="0.22" />
+        <entry key="..\:/Android Studio/Maps 15 Januari/app/src/main/res/layout/maps_fragment.xml" value="0.19157608695652173" />
+        <entry key="..\:/Android Studio/Maps 15 Januari/app/src/main/res/layout/nav_header_menu.xml" value="0.1272644927536232" />
+        <entry key="..\:/Android Studio/Maps 15 Januari/app/src/main/res/menu/activity_main_drawer.xml" value="0.209375" />
+        <entry key="..\:/Android Studio/Maps 15 Januari/app/src/main/res/menu/menu.xml" value="0.209375" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>
