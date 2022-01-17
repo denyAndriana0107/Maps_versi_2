@@ -37,6 +37,7 @@ class HomeFragment : Fragment() {
 
         _binding = FragmentHomeBinding.inflate(inflater, container, false)
         val root: View = binding.root
+        binding.progressBar2.visibility = View.VISIBLE
         getData()
         return root
     }
@@ -50,6 +51,7 @@ class HomeFragment : Fragment() {
         NetworkModule.servicesKordinat().getData().enqueue(object : Callback<KordinatResponse> {
             override fun onResponse(call: Call<KordinatResponse>, response: Response<KordinatResponse>) {
                 if (response.isSuccessful) {
+                    binding.progressBar2.visibility = View.GONE
                     val data = response.body()?.body
                     if (data?.size ?: 0 > 0) {
                         showData(data)

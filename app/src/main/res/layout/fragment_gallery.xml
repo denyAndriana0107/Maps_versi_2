@@ -6,6 +6,17 @@
     android:layout_height="match_parent"
     tools:context=".ui.ui.gallery.GalleryFragment">
 
+    <ProgressBar
+        android:id="@+id/progressBar3"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:translationZ="2dp"
+        app:layout_constraintBottom_toBottomOf="@+id/mapView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/mapView" />
+
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/fab"
         android:layout_width="wrap_content"
@@ -15,6 +26,7 @@
         android:layout_marginBottom="64dp"
         android:minWidth="48dp"
         android:minHeight="48dp"
+        app:backgroundTint="@color/design_default_color_secondary"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:srcCompat="@drawable/ic_pay"
@@ -25,7 +37,7 @@
         android:layout_width="100dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
-        android:backgroundTint="#26C6DA"
+        android:backgroundTint="@color/design_default_color_secondary"
         android:text="Show"
         android:textColor="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
@@ -49,7 +61,7 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="128dp"
-        android:background="#D8D4D4"
+        android:background="#99D8D4D4"
         android:translationZ="2dp"
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
         app:layout_constraintEnd_toEndOf="parent"

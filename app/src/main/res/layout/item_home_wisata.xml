@@ -34,9 +34,10 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/textView2"
         android:layout_centerHorizontal="false"
-        android:layout_marginLeft="150dp"
+        android:layout_marginLeft="130dp"
         android:layout_marginRight="30dp"
-        android:text="TextView" />
+        android:text="TextView"
+        android:textSize="18sp" />
 
     <TextView
         android:id="@+id/textView4"
@@ -46,6 +47,7 @@
         android:layout_alignParentLeft="false"
         android:layout_alignParentRight="false"
         android:layout_toRightOf="@id/textView3"
-        android:text="TextView" />
+        android:text="TextView"
+        android:textSize="18sp" />
 
 </RelativeLayout>

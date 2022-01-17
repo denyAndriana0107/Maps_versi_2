@@ -59,7 +59,7 @@ class GalleryFragment : Fragment() {
     ): View? {
         _binding = FragmentGalleryBinding.inflate(inflater, container, false)
         val root: View = binding.root
-
+        binding.progressBar3.visibility = View.VISIBLE
         binding.fab.setOnClickListener { view ->
             Snackbar.make(view, "Jarak : ${jarak} dan Cost : Rp. ${cost}", Snackbar.LENGTH_LONG)
                 .setAction("Action", null).show()
@@ -185,6 +185,7 @@ class GalleryFragment : Fragment() {
                                     response: Response<KordinatResponse>
                                 ) {
                                     if (response.isSuccessful) {
+                                        binding.progressBar3.visibility = View.GONE
                                         val data = response.body()?.body
                                         if (data?.size ?: 0 > 0) {
                                             val index: Int = data!!.size
@@ -258,6 +259,7 @@ class GalleryFragment : Fragment() {
                                 Callback<KordinatResponse> {
                                 override fun onResponse(call: Call<KordinatResponse>, response: Response<KordinatResponse>) {
                                     if(response.isSuccessful){
+                                        binding.progressBar3.visibility = View.GONE
                                         val data = response.body()?.body
                                         if (data?.size ?: 0 > 0) {
                                             val index: Int = data!!.size
@@ -357,6 +359,7 @@ class GalleryFragment : Fragment() {
                     response: Response<KordinatResponse>
                 ) {
                     if (response.isSuccessful) {
+                        binding.progressBar3.visibility = View.GONE
                         val data = response.body()?.body
                         if (data?.size ?: 0 > 0) {
                             val index: Int = data!!.size

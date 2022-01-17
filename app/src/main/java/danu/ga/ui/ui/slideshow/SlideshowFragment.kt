@@ -45,6 +45,7 @@ class SlideshowFragment : Fragment() {
 
         _binding = FragmentSlideshowBinding.inflate(inflater, container, false)
         val root: View = binding.root
+        binding.progressBar.visibility = View.GONE
         mapView = binding.maps2
         mapView.onCreate(savedInstanceState)
         mapView.onResume()
@@ -62,6 +63,7 @@ class SlideshowFragment : Fragment() {
             spinner.onItemSelectedListener =  object : AdapterView.OnItemSelectedListener{
                 override fun onItemSelected(p0: AdapterView<*>?, p1: View?, p2: Int, p3: Long) {
                     googleMap.clear()
+                    binding.progressBar.visibility = View.VISIBLE
                     getData(list[p2].toString())
                 }
 
@@ -85,6 +87,7 @@ class SlideshowFragment : Fragment() {
             Callback<KordinatResponse> {
             override fun onResponse(call: Call<KordinatResponse>, response: Response<KordinatResponse>) {
                 if(response.isSuccessful){
+                    binding.progressBar.visibility = View.GONE
                     val data = response.body()?.body
                     if (data?.size ?: 0 > 0) {
                         val index: Int = data!!.size
