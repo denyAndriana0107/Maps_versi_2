@@ -135,7 +135,7 @@ class GalleryFragment : Fragment() {
                         listMutasiKordinatPath = ArrayList(jumlah+1)
 
                         if(jumlah != 0 ){
-                            var numberOfGenerations:Int = 0
+                            var numberOfGenerations:Int = 4
                             val stopAt:Int= 2500
                             val GAUSE = true
                             val pop: Population = Population(30,jumlah, 1.0, 1.0)
@@ -144,7 +144,7 @@ class GalleryFragment : Fragment() {
                             }
                             while (numberOfGenerations != stopAt) {
                                 //Select / Crossover
-                                while (pop.Mate() == false);
+                                while (pop.Mate() == false)
                                 //Mutate
                                 for (i in 0 until pop.getNextGen().size) {
                                     pop.getNextGen()[i]!!.setPath(pop.Mutation(pop.getNextGen()[i]!!.getPath()))

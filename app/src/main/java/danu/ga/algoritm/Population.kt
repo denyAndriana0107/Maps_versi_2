@@ -1,5 +1,6 @@
 package danu.ga.algoritm
 
+import android.graphics.Point
 import danu.ga.algoritm.City
 import danu.ga.algoritm.Path
 import java.util.*
@@ -41,7 +42,6 @@ class Population {
     // Init Population Wisata
     fun createPopulation(p: Path){
         var i = 0
-        val waktu = 11
         while (i<populationSize!!){
             val tmpCity = arrayOfNulls<City>(numCity!!)
 
@@ -56,17 +56,7 @@ class Population {
         }
 
     }
-    fun ceckTime(p: Path){
-        val waktu = 11
-        val tmpCity = arrayOfNulls<City>(numCity!!)
-        var j = 1
-        for (i in 0 until tmpCity.size){
-            if (p.getPath().get(i)?.getTutup()!! <= waktu && p.getPath().get(i)?.getBuka()!! >= waktu){
-                j++
-            }
-        }
-        print("jumlah:" + j)
-    }
+
 
     fun getPopulation(): Array<Path?> {
         return population
@@ -100,7 +90,8 @@ class Population {
         return -1
     }
     fun RandomNum(min: Int, max: Int): Int {
-        return min + Random().nextInt(max - min)
+           return min + Random().nextInt(max - min)
+
     }
 
     //menghitung nilai fitness
@@ -108,7 +99,7 @@ class Population {
         Arrays.sort(population)
         for (i in 0 until population.size) {
 //            val lol: Int = 100 / (population[i]!!.getCost()!!.toInt() + 1)
-            val lol: Int = 100 / (population[i]!!.getCost()!!.toInt()+10)
+            val lol: Int = 100 / (population[i]!!.getCost()!!.toInt()+1)
             population[i]!!.setFitness(lol)
         }
     }
@@ -123,12 +114,12 @@ class Population {
     // Mutasi
      fun Mutation(child: Array<City?>): Array<City?> {
         val check = RandomNum(0, 100)
-
         if (check <= mutationRate * 100) {
             val point1 = RandomNum(0, numCity!! - 1)
             var point2 = RandomNum(0, numCity!! - 1)
+            println("perbandingan ${point1}+${point2}")
             while (point2 == point1) {
-                point2 = RandomNum(0, numCity!! - 1)
+                point2 = 1+point1
             }
             val city1 = child[point1]
             val city2 = child[point2]
@@ -140,7 +131,7 @@ class Population {
 
 
     fun AddToGenerationCheckFull(child1: Array<City?>?, child2: Array<City?>?): Boolean {
-        if (this.done === this.populationSize) {
+        if (this.done == this.populationSize) {
             return true
         }
         val newGenChild1 = Path(numCity!!)
@@ -215,7 +206,7 @@ class Population {
                 var found = false
                 //Fixing Child1
                 for (j in 0 until numCity!!) {
-                    if (population[parent2]!!.getPath()[i] === child1[j]) {
+                    if (population[parent2]!!.getPath()[i] == child1[j]) {
                         found = true
                         break
                     }
@@ -226,7 +217,7 @@ class Population {
                 found = false
                 //Fixing Child2
                 for (j in 0 until numCity!!) {
-                    if (population[parent1]!!.getPath()[i] === child2[j]) {
+                    if (population[parent1]!!.getPath()[i] == child2[j]) {
                         found = true
                         break
                     }
@@ -259,7 +250,7 @@ class Population {
 
 
     fun getDone(): Int {
-        return done!!
+        return done
     }
 
     fun setDone(done: Int) {
