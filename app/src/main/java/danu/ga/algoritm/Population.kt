@@ -117,7 +117,6 @@ class Population {
         if (check <= mutationRate * 100) {
             val point1 = RandomNum(0, numCity!! - 1)
             var point2 = RandomNum(0, numCity!! - 1)
-            println("perbandingan ${point1}+${point2}")
             while (point2 == point1) {
                 point2 = 1+point1
             }

@@ -32,7 +32,7 @@ fun main(){
     val current = LocalDateTime.now()
     val formatter = DateTimeFormatter.ofPattern("HH.mm")
     val formatted = current.format(formatter)
-    val time:Double = 7.1
+    val time:Double = 15.1
     for (i in 0 until pathArray.size){
         if (pathArray[i].tutup!! > time && pathArray[i].buka!! < time){
             jumlah ++

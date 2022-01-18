@@ -65,7 +65,7 @@ class Path:Comparable<Path>  {
         val current = LocalDateTime.now()
         val formatter = DateTimeFormatter.ofPattern("HH.mm")
         val formatted = current.format(formatter)
-        val time:Double = 7.1
+        val time:Double = formatted.toDouble()
 
         //memasukan ke array utama
         var list:MutableList<City> = mutableListOf()
@@ -77,10 +77,6 @@ class Path:Comparable<Path>  {
             i++
         }
         path = list.toTypedArray()
-//        path = arrayOfNulls(numCities!!)
-//        for (i in 0 until path.size) {
-//            path[i] = City(i, RandomNum(1, 99).toDouble(), RandomNum(1, 99).toDouble(),0,0)
-//        }
 
     }
     fun RandomNum(min: Int, max: Int): Int {
